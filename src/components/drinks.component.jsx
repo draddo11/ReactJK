@@ -19,24 +19,28 @@ class Drinks extends Component {
     
     
     }
+
+    componentDidMount(){
+        fetch(`https://api.punkapi.com/v2/beers`)
+        .then(response => response.json() )
+        .then( drinks => this.setState({mixes: drinks }));
+        
+    }
     
     render(){
         return(
             <div>
-            <span >
-            
+          
             {
                 this.state.mixes.map(
-                    (mix,index)=> <h1 key={index}>
-                    {mix.name}, {mix.type}
-                    </h1>
-                    )
-
-            }
-            </span>
+                    (mix,index) => (<h1 key={index}>
+                    {mix.name},{mix.description}
+                    </h1>))
+                }
+           
             </div>
            
-        )
+        );
     }
 
 }
