@@ -16,7 +16,7 @@ class App extends React.Component {
       <div className="App">
         <header className="App-header">
           
-<Drinks/>
+       <Drinks/>
         {this.state.name}
             
         </header>

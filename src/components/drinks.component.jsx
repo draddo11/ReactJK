@@ -7,14 +7,14 @@ class Drinks extends Component {
         super();
 
         this.state={
-            mixes:[{name:'alomo',
+            mixes:[{name:'Fanta',
                 type:'herbs',
         id:'dhdhdj'},
             { name: 'coke',
                 type : 'soda',
             id: 'sdcsdfsdf'
         }
-    ]
+            ]
         }
     
     
@@ -22,11 +22,20 @@ class Drinks extends Component {
     
     render(){
         return(
-            <h1 key={this.state.mixes.id}>
-            {this.state.mixes.map(mix => <h1>{mix.name}</h1>)
+            <div>
+            <span >
+            
+            {
+                this.state.mixes.map(
+                    (mix,index)=> <h1 key={index}>
+                    {mix.name}, {mix.type}
+                    </h1>
+                    )
 
             }
-            </h1>
+            </span>
+            </div>
+           
         )
     }
 
