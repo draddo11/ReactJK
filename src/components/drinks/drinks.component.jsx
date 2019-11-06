@@ -7,14 +7,7 @@ class Drinks extends Component {
         super();
 
         this.state={
-            mixes:[{name:'Fanta',
-                type:'herbs',
-        id:'dhdhdj'},
-            { name: 'coke',
-                type : 'soda',
-            id: 'sdcsdfsdf'
-        }
-            ]
+            mixes:[]
         }
     
     
