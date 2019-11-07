@@ -23,7 +23,7 @@ class Cats extends Component {
 
     render(){
         return(
-            <div>
+            <div className='card'>
             Cats Api
             {
                 this.state.cats.map(

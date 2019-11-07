@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import '../card/card.styles.scss'
 
 
 class Drinks extends Component {
@@ -9,8 +9,7 @@ class Drinks extends Component {
         this.state={
             mixes:[]
         }
-    
-    
+     
     }
 
     componentDidMount(){
@@ -22,12 +21,12 @@ class Drinks extends Component {
     
     render(){
         return(
-            <div>
+            <div className='card'>
           
             {
                 this.state.mixes.map(
                     (mix,index) => (<h1 key={index}>
-                    {mix.name},{mix.description}
+                   Name : {mix.name}, Drink info: {mix.description}
                     </h1>))
                 }
            

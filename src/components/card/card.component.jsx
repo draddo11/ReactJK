@@ -1,13 +1,13 @@
 import React from 'react';
 
-
+import  './card.styles.scss'; 
 
 export const Card = (props)=> {
-    console.log(props);
+    // console.log(props);
     return(
 
-        <div>
-        <h1>Hello Card</h1>
+        <div className='card'>
+        {props.children}
 
         </div>
 
