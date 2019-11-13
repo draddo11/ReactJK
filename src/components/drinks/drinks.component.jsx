@@ -25,7 +25,7 @@ class Drinks extends Component {
           
             {
                 this.state.mixes.map(
-                    (mix,index) => (<h1 key={index}>
+                    (mix,index) => (<h1  key={index}>
                    Name : {mix.name}, Drink info: {mix.description}
                     </h1>))
                 }

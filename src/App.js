@@ -17,18 +17,15 @@ class App extends React.Component {
     return (
       <div className="App">
         
-      <header className="App-header">
+     
       
-       <HomePage> 
-       
-       
+       <HomePage>
        
        </HomePage>
        <Drinks/>
-        {this.state.name}
+        
         <Cats/>
-          
-        </header>
+        
   
       </div>
     );
