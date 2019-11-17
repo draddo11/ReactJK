@@ -24,12 +24,15 @@ class Cats extends Component {
     render(){
         return(
             <div className='card'>
-            Cats Api
+           <span> <em>Cats Api</em>
+           <h2>Here are your cat facts starting from ->>>></h2>
+           </span>
+           
             {
                 this.state.cats.map(
-                    (cat,index) =>( <h2 key={index}> 
-                        {cat.breed}, {cat.description}
-                        </h2>)
+                    (cat,index) =>( <h3 key={index}> 
+                      {cat.name}, {cat.weight.metric}, {cat.temprament}, {cat.breed}, {cat.description}
+                        </h3>)
                 )
             }
             </div>

@@ -1,22 +1,27 @@
-import React,{Component} from 'react';
-import {card} from '../card/card.component';
-import Drinkspage from '../pages/drinkspage.component';
-import {Route , Link}  from 'react-router-dom';
+import React from 'react';
+// import {card} from '../card/card.component';
+// import Drinkspage from '../pages/drinkspage.component';
+import{ Header, Button,Container} from 'semantic-ui-react';
+import { Link}  from 'react-router-dom';
 
 
 
-class HomePage extends Component {
+const HomePage =(props)=> {
+// console.table(props);
 
-render(){
     return(
-        <div className='card'>
-        <Link to ='/drinks'><button>To Drinks page</button></Link>
-        <h1>HomePage component  add <em>{'/drinks'} </em> to the url  for drinks facts and <em>{'/cats'}</em>  to the url for cat facts</h1>
-        
+        <div >
+     <Container>
+        <Header as='h2' color='blue'>Welcome To Cats and Drinks Page</Header>
+        <Link to ='/drinks'><Button  labelPosition='right' color='orange'>Click here for your beverage facts</Button></Link>
+        <Link to ='./cats'><Button labelPosition='left' primary >Click here for Cat facts</Button></Link>
+        <Button onClick={()=> props.history.push('/cats')}>Cats fact page </Button>
+        <h1></h1>
+     </Container>
         
         </div>
     )
-}
+
 }
 
 
