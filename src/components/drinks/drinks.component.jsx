@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import '../card/card.styles.scss'
+
 
 
 class Drinks extends Component {
